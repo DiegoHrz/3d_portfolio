@@ -9,7 +9,6 @@ import { slideIn} from '../utils/motion';
 
 
 const Contact = () => {
-
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
@@ -19,9 +18,30 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {}
+  const handleChange = (e) => {
+    // const { name, value } = e.target; 
 
-  const handleSubmit = (e) => {}
+    // setForm({ ...form, [name]:value })
+  }
+
+  const handleSubmit = (e) => {
+
+    emailjs.send()
+    // .then(()=>{
+    //   setLoading(false);
+    //   alert('Thank you. I will get back to you as soon as possible');
+    //   setForm({
+    //     name: '',
+    //     emails: '',
+    //     message: '',
+    //   })
+    // }, (error) =>{
+    //   setLoading(false)
+
+    //   console.log(error);
+    //   alert('Something went wng')
+    // })
+  }
 
 
  
@@ -56,8 +76,8 @@ const Contact = () => {
             className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none'/>
           </label>
 
-          <button type='submit' className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary' rounded-xl>
-            {loading ? 'Sending' : 'Send'}
+          <button type='submit' className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'>
+            {loading ? 'Sending...' : 'Send'}
           </button>
 
         </form>
