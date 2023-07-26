@@ -63,7 +63,7 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My workds</p>
+        <p className={styles.sectionSubText}>My works</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
@@ -73,7 +73,7 @@ const Works = () => {
             variants={fadeIn("", "", 0.1, 1)}
             className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
             >
-              My projects for the past 3 yeas in the Tech Industry using JS, Node JS, React, Tailwind CSS and others feel free to click on the project of your choice and use the respective code for your own porpuse to complete the experience. Have a look and leave a star 🌟
+              My projects for the past 3 yeas in the Tech Industry using JS, Node JS, React, Tailwind CSS and others feel free to click on the project of your choice and use the respective code for your own purpose to complete the experience. Have a look and leave a star 🌟
           </motion.p>
       </div>
 
